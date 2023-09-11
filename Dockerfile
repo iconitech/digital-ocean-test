@@ -1,4 +1,4 @@
-FROM quay.io/keycloak/keycloak:21.1.2
+FROM quay.io/keycloak/keycloak:22.0.0
 
 COPY ./event-listener-http-jar-with-dependencies.jar /opt/keycloak/providers/
 
