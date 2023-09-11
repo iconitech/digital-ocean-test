@@ -1,5 +1,7 @@
 FROM quay.io/keycloak/keycloak:22.0.0
 
+COPY ./cache-ispn.xml /opt/keycloak/conf/cache-ispn.xml
+
 COPY ./event-listener-http-jar-with-dependencies.jar /opt/keycloak/providers/
 
 RUN /opt/keycloak/bin/kc.sh build --features-disabled="fips"
