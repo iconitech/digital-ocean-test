@@ -4,7 +4,7 @@ COPY ./event-listener-http-jar-with-dependencies.jar /opt/keycloak/providers/
 
 RUN /opt/keycloak/bin/kc.sh build --features-disabled="fips"
 
-ENV JGROUPS_DISCOVERY_PROTOCOL=dns.DNS_PING
-ENV JGROUPS_DISCOVERY_PROPERTIES=dns_query=
+#ENV JGROUPS_DISCOVERY_PROTOCOL=dns.DNS_PING
+#ENV JGROUPS_DISCOVERY_PROPERTIES=dns_query=
 
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start --proxy=edge --hostname-strict=false"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--verbose", "--proxy=edge --hostname-strict=false"]
