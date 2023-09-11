@@ -7,5 +7,7 @@ RUN /opt/keycloak/bin/kc.sh build --features-disabled="fips"
 #ENV JGROUPS_DISCOVERY_PROTOCOL=dns.DNS_PING
 #ENV JGROUPS_DISCOVERY_PROPERTIES=dns_query=
 ENV JGROUPS_DISCOVERY_PROTOCOL=dummy
+ENV JGROUPS_PING=NONE
+ENV JGROUPS_TCP_PING_PORT=7600
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start --proxy=edge --hostname-strict=false"]
