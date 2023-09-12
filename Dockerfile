@@ -5,7 +5,7 @@ COPY ./event-listener-http-jar-with-dependencies.jar /opt/keycloak/providers/
 #COPY ./org.infinispan.infinispan-core-jakarta-14.0.10.Final.jar /opt/keycloak/lib/lib/main/
 
 
-RUN /opt/keycloak/bin/kc.sh build --features-disabled="fips"
+RUN /opt/keycloak/bin/kc.sh build --features-disabled="fips" --cache=local
 
 COPY ./jgroups.properties /opt/keycloak/conf/
 
