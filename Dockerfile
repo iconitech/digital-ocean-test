@@ -1,4 +1,4 @@
-FROM quay.io/keycloak/keycloak:22.0.0
+FROM quay.io/keycloak/keycloak:22.0.3
 
 COPY ./event-listener-http-jar-with-dependencies.jar /opt/keycloak/providers/
 #COPY ./org.infinispan.infinispan-commons-jakarta-14.0.10.Final.jar /opt/keycloak/lib/lib/main/
