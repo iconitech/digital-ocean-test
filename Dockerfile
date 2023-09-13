@@ -1,4 +1,4 @@
-FROM quay.io/keycloak/keycloak:22.0.0
+FROM quay.io/keycloak/keycloak:22.0.3
 
 RUN /opt/keycloak/bin/kc.sh build --features-disabled="fips" --cache=local --cache-stack=tcp
 
